@@ -1,0 +1,9 @@
+README.md
+.prettierrc
+.prettierignore
+package.json
+package-lock.json
+webpack.common.js
+webpack.dev.js
+webpack.prod.js
+eslint.config.mjs
