@@ -1,0 +1,19 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+div.image-ctn {
+    /* width: 80vw; */
+    /* overflow-x: scroll; */
+    display: flex;
+    flex-direction: row;
+}
+
+div.picture-frame {
+    width: 70vw;
+    height: 500px;
+    overflow: scroll;
+    border: 2px solid red;
+}
