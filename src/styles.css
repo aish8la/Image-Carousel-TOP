@@ -2,18 +2,28 @@
 body{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
-div.image-ctn {
-    /* width: 80vw; */
-    /* overflow-x: scroll; */
+.main-ctn {
+    display: flex;
+    justify-content: center;
+}
+
+.image-ctn {
     display: flex;
     flex-direction: row;
 }
 
-div.picture-frame {
-    width: 70vw;
-    height: 500px;
-    overflow: scroll;
+.image-ctn img {
+    object-fit: contain;
+    background-color: black;
+    height: 547px;
+    min-width: 820px;
+}
+
+.picture-frame {
+    width: 820px;
+    overflow-x: scroll;
     border: 2px solid red;
 }
