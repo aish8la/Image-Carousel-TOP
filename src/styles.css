@@ -12,18 +12,22 @@ body{
 
 .image-ctn {
     display: flex;
-    flex-direction: row;
+    position: absolute;
+    transform: translate(0%);
 }
 
-.image-ctn img {
+.slide-dimensions {
+    width: min(90vw, 820px);
+    aspect-ratio: 3 / 2;
+}
+
+.image-ctn > img {
     object-fit: contain;
     background-color: black;
-    height: 547px;
-    min-width: 820px;
 }
 
 .picture-frame {
-    width: 820px;
-    overflow-x: scroll;
+    overflow: hidden;
+    position: relative;
     border: 2px solid red;
 }
