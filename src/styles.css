@@ -60,3 +60,24 @@ body{
     opacity: 1;
 }
 
+.slide-indicator-ctn {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.slide-indicator-ctn > button {
+    border-radius: 50%;
+    height: 15px;
+    border: 2px solid white;
+    aspect-ratio: 1;
+    background-color: transparent;
+}
+
+.slide-indicator-ctn > .current-indicator-slide {
+    background-color: white;
+    border: 2px solid black;
+}
+
