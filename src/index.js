@@ -22,6 +22,10 @@ for (let i = 0; i < numOfSlides; i++) {
 
 changeIndicator(0);
 
+setInterval(() => {
+    slideChange(currentSlide + 1);
+}, 5000);
+
 slideIndicatorCtn
   .querySelectorAll(".slide-indicator-ctn > button")
   [currentSlide].classList.add("current-indicator-slide");
