@@ -1,13 +1,37 @@
 import "./styles.css";
 
-const nextBtn = document.querySelector(".next-img-btn");
-const previous = document.querySelector(".previous-btn");
+const slideIndicatorCtn = document.querySelector(".slide-indicator-ctn");
 const imageCtn = document.querySelector(".image-ctn");
-let rightValue = 0;
+let numOfSlides = imageCtn.querySelectorAll("img").length;
+let currentSlide = 0;
 
-function nextClick() {
-    rightValue += ((1 / 6) * 100);
-    imageCtn.setAttribute("style", `transform: translate(-${rightValue}%, 0%)`);
+for (let i = 0; i < numOfSlides; i++) {
+  const indicatorBtn = document.createElement("button");
+  indicatorBtn.setAttribute("data-indicator-index", i);
+  slideIndicatorCtn.appendChild(indicatorBtn);
 }
 
-nextBtn.addEventListener("click", nextClick);
+slideIndicatorCtn
+  .querySelectorAll(".slide-indicator-ctn > button")
+  [currentSlide].classList.add("current-indicator-slide");
+
+function slideChange(slideIndex) {
+  if (slideIndex >= numOfSlides) {
+    slideIndex = 0;
+  }
+  if (slideIndex < 0) {
+    slideIndex = numOfSlides - 1;
+  }
+  imageCtn.style.transform = `translate(-${(slideIndex / numOfSlides) * 100}%, 0%)`;
+  currentSlide = slideIndex;
+}
+
+document.addEventListener("click", (e) => {
+  //Event listener for navigation buttons
+  if (e.target.closest(".side-nav-ctn > button")) {
+    const modifier = Number(e.target.dataset.indexModifier);
+    slideChange(currentSlide + modifier);
+  }
+
+  //Event Listener for slide indicator buttons
+});
