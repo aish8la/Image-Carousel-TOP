@@ -5,13 +5,13 @@ const imageCtn = document.querySelector(".image-ctn");
 let numOfSlides = imageCtn.querySelectorAll("img").length;
 let currentSlide = 0; //Do not change manually or via assignment. Use the changeIndicator function to change this
 
-
 function changeIndicator(newSlide) {
-    const indicatorBtns = slideIndicatorCtn
-    .querySelectorAll(".slide-indicator-ctn > button");
-    indicatorBtns[currentSlide].classList.remove("current-indicator-slide");
-    indicatorBtns[newSlide].classList.add("current-indicator-slide");
-    currentSlide = newSlide;
+  const indicatorBtns = slideIndicatorCtn.querySelectorAll(
+    ".slide-indicator-ctn > button",
+  );
+  indicatorBtns[currentSlide].classList.remove("current-indicator-slide");
+  indicatorBtns[newSlide].classList.add("current-indicator-slide");
+  currentSlide = newSlide;
 }
 
 for (let i = 0; i < numOfSlides; i++) {
@@ -23,7 +23,7 @@ for (let i = 0; i < numOfSlides; i++) {
 changeIndicator(0);
 
 setInterval(() => {
-    slideChange(currentSlide + 1);
+  slideChange(currentSlide + 1);
 }, 5000);
 
 slideIndicatorCtn
