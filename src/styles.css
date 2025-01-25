@@ -18,12 +18,13 @@ body{
 
 .slide-dimensions {
     width: min(90vw, 820px);
+    height: auto;
     aspect-ratio: 3 / 2;
 }
 
 .image-ctn > img {
     object-fit: contain;
-    background-color: black;
+    background-color: rgb(87, 87, 87);
 }
 
 .picture-frame {
@@ -31,3 +32,31 @@ body{
     position: relative;
     border: 2px solid red;
 }
+
+.navigation-ctn {
+    position: absolute;
+}
+
+.side-nav-ctn {
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-nav-ctn > button {
+    border: none;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 900;
+    height: min(40%, 200px);
+    width: min(8%, 50px);
+    background-color: rgb(70, 70, 70);
+    opacity: 15%;
+}
+
+.navigation-ctn:hover > .side-nav-ctn > button {
+    background-color: rgba(70, 70, 70, 0.364);
+    opacity: 1;
+}
+
