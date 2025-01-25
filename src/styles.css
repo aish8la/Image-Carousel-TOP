@@ -1,83 +1,81 @@
-
-body{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 .main-ctn {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .image-ctn {
-    display: flex;
-    position: absolute;
-    transform: translate(0%);
+  display: flex;
+  position: absolute;
+  transform: translate(0%);
 }
 
 .slide-dimensions {
-    width: min(90vw, 820px);
-    height: auto;
-    aspect-ratio: 3 / 2;
+  width: min(90vw, 820px);
+  height: auto;
+  aspect-ratio: 3 / 2;
 }
 
 .image-ctn > img {
-    object-fit: contain;
-    background-color: rgb(87, 87, 87);
+  object-fit: contain;
+  background-color: rgb(87, 87, 87);
 }
 
 .picture-frame {
-    overflow: hidden;
-    position: relative;
-    border: 2px solid red;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid red;
 }
 
 .navigation-ctn {
-    position: absolute;
+  position: absolute;
 }
 
 .side-nav-ctn {
-    height: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .side-nav-ctn > button {
-    border: none;
-    border-radius: 5px;
-    font-size: 2rem;
-    font-weight: 900;
-    height: min(40%, 200px);
-    width: min(8%, 50px);
-    background-color: rgb(70, 70, 70);
-    opacity: 15%;
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: 900;
+  height: min(40%, 200px);
+  width: min(8%, 50px);
+  background-color: rgb(70, 70, 70);
+  opacity: 15%;
 }
 
 .navigation-ctn:hover > .side-nav-ctn > button {
-    background-color: rgba(70, 70, 70, 0.364);
-    opacity: 1;
+  background-color: rgba(70, 70, 70, 0.364);
+  opacity: 1;
 }
 
 .slide-indicator-ctn {
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
 }
 
 .slide-indicator-ctn > button {
-    border-radius: 50%;
-    height: 15px;
-    border: 2px solid white;
-    aspect-ratio: 1;
-    background-color: transparent;
+  border-radius: 50%;
+  height: 15px;
+  border: 2px solid white;
+  aspect-ratio: 1;
+  background-color: transparent;
 }
 
 .slide-indicator-ctn > .current-indicator-slide {
-    background-color: white;
-    border: 2px solid black;
+  background-color: white;
+  border: 2px solid black;
 }
-
